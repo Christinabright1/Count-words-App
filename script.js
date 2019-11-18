@@ -10,6 +10,8 @@ let length= document.getElementById("displayLength");
 textContent.addEventListener("input", function(){
   //get value
   let value= textContent.value;
-  //let split value into array and get it length
-  length.innerHTML= value.split(" ").length;
+  //let split value into array 
+  //remove white space in the array
+  let removewhiteSpaceinArray=  value.split(" ").filter((item) => item !== "").length;
+  length.innerHTML= removewhiteSpaceinArray;
 });
